@@ -28,7 +28,7 @@ window.onload = function() {
 
 function setup() {
 createCanvas(windowWidth, windowHeight);
-  background('#FFF');
+  background('#ffb3e6');
   noFill();
   wind = [random(-40, 40), random(-40, 10)];
   frameRate(30);
@@ -36,7 +36,7 @@ createCanvas(windowWidth, windowHeight);
     strokeWeight(2);
   }
   fscache = createGraphics(windowWidth, windowHeight);
-  fscache.background('white');
+  fscache.background('#ffb3e6');
 }
 
 function draw() {
@@ -53,6 +53,12 @@ function draw() {
 
 function mousePressed() {
   document.getElementById("info").classList.add('hidden');
+
+  let music = document.getElementById("bgMusic");
+  if (music.paused) {
+    music.play();
+  }
+  
   wind = [random(-40, 40), random(-40, 10)];
   flowers.push(new Flower(random(.9, 1.3)*imageSize/100));
   active = 0;
@@ -65,8 +71,8 @@ function resetFlowers() {
     }
   flowers = [];
   active = steps;
-  background('white');
-  fscache.background('white');
+  background('#ffb3e6');
+  fscache.background('#ffb3e6');
 }
 
 function keyTyped() {

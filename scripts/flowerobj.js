@@ -6,9 +6,9 @@ function Leaf(scale, pg, tscale) {
   this.drawing = pg;
   this.ts = tscale;
   colorMode(HSB);
-  this.strokec = color(random(70,80), random(100, 150), random(80, 100));
+  this.strokec = color(random(110, 130), 80, 60);
   colorMode(RGB);
-  this.fillc = color(random(200,240), 255, random(200,240));
+  this.fillc = color(random(20, 40), random(80, 120), random(20, 40));
   let t = random(6.28);
   let r = random(50, 70) * scale;
   this.x2 = polar([r,t])[0];
@@ -62,9 +62,9 @@ function Stamen(scale, pg, tscale) {
     this.bscale = 1;
   }
   colorMode(HSB);
-  this.strokec = color(random(40,60), random(20, 100), random(100, 150));
+  this.strokec = color(random(40, 60), random(40, 80), random(60, 100));
   colorMode(RGB);
-  this.ballc = color(80, random(160,240), random(230, 255));
+  this.ballc = color(60, random(120, 180), random(160, 200));
   let r = random(50) * scale;
   let t = random(6.28);
   let cr = random(r);
@@ -94,7 +94,7 @@ function Petal(scale, pg, tscale) {
   this.drawing = pg;
   colorMode(HSB);
   this.strokec = color(0+colorshift, 70, random(100, 200));
-  this.fillc = color(random(320-colorshift, 390-colorshift), 60, random(150, 255), .6);
+  this.fillc = color(random(320-colorshift, 390-colorshift), 60, random(150, 255), 0.9);
   this.ts = tscale;
   let veins = 7;
   this.tips = [];
